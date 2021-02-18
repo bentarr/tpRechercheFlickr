@@ -1,0 +1,55 @@
+figcaption {
+  display: block;
+  margin: auto;
+  width: 500px;
+  height: 30px;
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding-top:15px;
+  text-align: center;
+}
+
+img{
+  display: block;
+  margin: auto;
+}
+
+.imagesAutres {
+  object-fit: cover !important;
+  display: inline-block !important;
+  width: 100% !important;
+  max-width: 400px !important;
+  max-height: 300px !important;
+  margin-left: 50px !important;
+  height: 100% !important;
+}
+.imageInfo{
+  margin: auto;
+}
+figure {
+  border: thin #c0c0c0 solid;
+  display: flex;
+  flex-flow: column;
+  padding: 5px;
+  max-width: 500px;
+}
+
+.infoImage{
+  font-family: 'Inter UI', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  margin-left: 30px;
+}
+
+.autres{
+  display: block;
+  margin: 50px auto 50px 500px;
+  width: 500px;
+  height: 30px;
+  background-color: #222;
+  color: #fff;
+  font: italic smaller sans-serif;
+  padding-top:15px;
+  text-align: center;
+}

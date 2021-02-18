@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+
+
+
+<section class="container">
+  <div class="row">
+    <div class="input-field col s6">
+      <input #imageSearch type="text" class="validate" placeholder="Rechercher votre image" (keyup)="search(imageSearch.value)">
+    </div>
+  </div>
+  <div class="row5">
+    <div class="col s3" *ngFor="let image of images ">
+      <div class="card z-depth-2">
+        <div class="card-image">
+          <figure style="cursor: pointer;" (click)="displayInfo(image.id)">
+            <img src="{{image.url}}_m.jpg" title="{{image.title}}">
+            <br />
+            <figcaption class="imageTitle" style="font-size: 20px;">{{image.title}}</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+
+    <!--Bug de Scroll sous Angular et ng -->
+    <div
+      class="search-results"
+      infiniteScroll
+      [infiniteScrollDistance]="2"
+      [infiniteScrollThrottle]="50"
+      (scrolled)="onScroll()"
+    ></div>
+
+  </div>
+</section>

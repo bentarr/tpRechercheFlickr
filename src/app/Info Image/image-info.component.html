@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+<section class="section container" *ngIf="imageInfo">
+  <div class="row center">
+    <figcaption style="margin-top: 30px">{{ imageInfo.title }}</figcaption>
+  </div>
+  <div class="row">
+    <figure class="imageInfo">
+      <img src="{{imageInfo.url}}_b.jpg" title="{{imageInfo.title}}">
+      <h5 class="infoImage">Auteur de la photo : <br/> <br/> {{ imageInfo.owner.username }} <br/> {{ imageInfo.owner.realname }}</h5>
+      <p class="infoImage">Description de la photo : <br/> <br/>{{ imageInfo.description }}</p>
+     </figure>
+  </div>
+  <div class="row">
+    <h5 class="autres">Les autres publications de <b>{{ imageInfo.owner.username }}</b></h5>
+    <div class="row">
+      <div class="col s3" *ngFor="let image of userPhotos ">
+        <div class="card z-depth-2">
+          <figure>
+            <a style="cursor: pointer;" (click)="displayInfo(image.id)">
+              <img class="imagesAutres" src="{{image.url}}_m.jpg" title="{{image.title}}">
+              <figcaption class="img-title card-title truncate" style="font-size: 20px;">{{image.title}}</figcaption>
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
