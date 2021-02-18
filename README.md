@@ -14,8 +14,8 @@ Ici, notre Angular est bien lancé, notre Node.Js aussi ainsi que MongoDb.
 Pour voir la bdd se remplir après la recherche d'un mot clé sur Angular --> Ouvrir éditeur mongo --> `use bddTp` --> `db.Images.find()` --> listeDonnees s'affiche.
 
 ## Axe d'amélioration
--Ici, les mots clés dèjà recherché une fois se mettent quand même dans le BDD, il manque le système permettant de dire si un mot clé est dèjà présent  dans la base ou non. On a essayé un bon moment de régler le problème avec rxjs, tout les essais sont en commentaires dans les fichiers "flickr.service.ts" en bas de page. 
-Finir ce système serai donc un bon axe d'amélioration.
+-Ici, les mots clés dèjà recherché une fois se mettent quand même dans le BDD, il manque le système permettant de dire si un mot clé est dèjà présent  dans la base ou non. On a essayé un bon moment de régler le problème avec rxjs, tout les essais sont en commentaires dans le fichier "flickr.service.ts" en bas de page. 
+Finir ce système serai donc un bon axe d'amélioration, sinon tout le reste est fonctionnel.
 
 ## Participants 
 GROUPE 2 BACHELOR 3 DEVOPS EPSI : 
