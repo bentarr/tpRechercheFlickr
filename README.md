@@ -1,27 +1,26 @@
-# TpRechercheFlickr
+# TpRechercheFlickr - Avec Angular, Node.js, MongoDb.
+Voici notre projet concernant l'exercice : SearchPhotos avec MongoDb et Node.js. 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
+Nous sommes partits du projet précedent : SearchPhotos avec Angular. Pour avoir un front correct et avoir toutes les fonctions concernant l'API flickr Service.*
+Pour ensuite ajouter un serveur Node.js utilisant Express et Mongoose rattaché à un service MongoDb qui gère en BDD tout les mots clés recherchés (en enregistrant bien les liens d'images).
 
-## Development server
+## Lancement d'application
+-Lancer un mongod pour lancer MongoDb.
+-Lancer un `ng serve --open` depuis le dossier angular pour lancer Angular et le front.
+-Lancer un `nodemon index.js` depuis le dossier `src` du dossier Angular.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Ici, notre Angular est bien lancé, notre Node.Js aussi ainsi que MongoDb. 
 
-## Code scaffolding
+Pour voir la bdd se remplir après la recherche d'un mot clé sur Angular --> Ouvrir éditeur mongo --> `use bddTp` --> `db.Images.find()` --> listeDonnees s'affiche.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Axe d'amélioration
+-Ici, les mots clés dèjà recherché une fois se mettent quand même dans le BDD, il manque le système permettant de dire si un mot clé est dèjà présent  dans la base ou non. On a essayé un bon moment de régler le problème avec rxjs, tout les essais sont en commentaires dans les fichiers "flickr.service.ts" en bas de page. 
+Finir ce système serai donc un bon axe d'amélioration.
 
-## Build
+## Participants 
+GROUPE 2 BACHELOR 3 DEVOPS EPSI : 
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+-BAZATS TOM
+-LESTON JORDAN
+-MADEZO OSCAR
+-BENETIER PAUL
