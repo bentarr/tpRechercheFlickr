@@ -6,9 +6,9 @@ import { FlickrOutput } from '../interfaces/flickr-output';
 import { FlickrPhoto } from '../interfaces/flickr-photo';
 import {Observable} from 'rxjs';
 import {FlickrImageInfo} from '../interfaces/flickr-image-info';
-import { HttpHeaders } from '@angular/common/http';
-import { mergeMap } from 'rxjs/operators';
-import { of } from 'rxjs';
+
+//import { mergeMap } from 'rxjs/operators';
+//import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -45,13 +45,11 @@ export class FlickrService {
       this.listeDonnees = data;
     });
     if (typeof( this.listeDonnees[0]) === 'undefined') {
-      console.log("Donnée inexistante");
       this.http.post<any>('http://localhost:7000/server/photos/', { name: keyword, lien: url + params }).subscribe(data => {
       });
     return this.getPhotos(url + params);
   }
   else {
-    console.log("Donnée existante");
     return this.getPhotos(this.listeDonnees[0].lien);
   }
 }
@@ -100,6 +98,11 @@ export class FlickrService {
     }));
   }
 
+  // Tentative Création système suppression doublon en bdd
+
+ /* Tentative de création du système permettant d'éviter les doublons de mot de clé dans la collection Mongo
+  Avec l'utilisation des modules rxjs..
+  
   getFlickrImg(name: string): Observable<any> {
     let apiUrl = 'https://www.flickr.com/services/rest/?method=flickr.photos.search&';
 
@@ -127,6 +130,5 @@ export class FlickrService {
       )
     );
   }
-
-
+*/
 }
